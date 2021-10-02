@@ -1,16 +1,34 @@
-function getRandIntFromRange(from, to) {
+function getRandInteger(from, to) {
   if (from < 0 || to <= from) {
-	  return false;
+    throw new RangeError('Числа не подходят.');
   }
-  let randIntFromRange = from - 0.5 + Math.random() * (to - from + 1);
-  return Math.round(randIntFromRange);
-};
+  return Math.round(from - 0.5 + Math.random() * (to - from + 1));
+}
 
+try {
+  getRandInteger(100, 300);
+}
+catch(error)
+{
+  if(error instanceof RangeError) {
+    // ошибка
+  }
+}
 
-function getRandIntWithPrecision(from, to, precision) {
+function getRandNumber(from, to, precision) {
   if (from < 0 || to <= from) {
-    return false;
+    throw new RangeError('Числа не подходят.');
   }
-  let randIntWithPrecision = Number((Math.random() * (to - from) + from).toFixed(precision));
-  return (randIntWithPrecision);
-};
+  return Number((Math.random() * (to - from) + from).toFixed(precision));
+}
+
+try {
+  getRandNumber(1.5, 1.9, 4);
+}
+catch(error)
+{
+  if(error instanceof RangeError) {
+    // ошибка
+  }
+}
+
