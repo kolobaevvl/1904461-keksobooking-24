@@ -23,7 +23,7 @@ function getRandNumber(from, to, precision) {
 }
 
 try {
-  getRandNumber(1.5, 1.9, 4);
+  getRandNumber(1.5, 2.9, 4);
 }
 catch(error)
 {
