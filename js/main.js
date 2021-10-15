@@ -116,5 +116,4 @@ const getRandomAdverts = (ADVERT_COUNT2) => {
 };
 
 getRandomAdverts(ADVERT_COUNT);
-
 // const FINAL_ADVERTS = getRandomAdverts(ADVERT_COUNT);
